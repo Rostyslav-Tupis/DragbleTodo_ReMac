@@ -1,69 +1,57 @@
-# React + TypeScript + Vite
+Todo Board
+A Kanban-style task management board built with React, TypeScript, and Vite. The project allows users to create columns, add tasks, edit tasks, and drag-and-drop both columns and tasks. It supports both desktop (mouse) and mobile (touch) interactions.
+Features
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Create Columns: Add new columns to organize tasks.
+Add Tasks: Create tasks within columns using an input field.
+Edit Tasks: Double-click a task to edit its description, save with Enter or on blur.
+Drag-and-Drop: Reorder columns and tasks via drag-and-drop on both desktop and mobile devices.
+Task Selection: Select multiple tasks for bulk actions (mark as complete/incomplete, move, or delete).
+Responsive Design: Adapts to mobile and desktop screens.
 
-Currently, two official plugins are available:
+Prerequisites
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Node.js: Version 18 or higher.
+npm: Version 8 or higher (comes with Node.js).
+Git: For cloning the repository.
 
-## Expanding the ESLint configuration
+Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Clone the Repository:
+git clone <repository-url>
+cd <repository-folder>
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Install Dependencies:
+npm install
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+Run the Development Server:
+npm run dev
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+This starts the Vite development server. Open http://localhost:5173 in your browser to view the app.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Scripts
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+npm run dev: Starts the development server with Vite.
+npm run build: Builds the project for production.
+npm run preview: Previews the production build locally.
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Usage
+
+Add a Column:
+Enter a column title in the input field at the top and click "Add" or press Enter.
+
+Add a Task:
+In a column, enter a task description in the input field and click "Add task" or press Enter.
+
+Edit a Task:
+Double-click a task’s description to edit it. Save by pressing Enter or clicking outside.
+
+Drag-and-Drop:
+On desktop: Click and drag columns or tasks to reorder them.
+On mobile: Touch and drag columns or tasks to reorder them.
+Drop indicators (purple lines) show where the item will be placed.
+
+Select Tasks:
+Check the checkbox on a task to select it.
+Use "Select All" or "Deselect All" buttons in a column for bulk selection.
+Selected tasks can be marked as complete/incomplete, moved to another column, or deleted.
