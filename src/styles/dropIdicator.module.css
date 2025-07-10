@@ -1,0 +1,58 @@
+.dropIndicator {
+  position: absolute;
+  background-color: #e33bf6;
+  z-index: 10;
+}
+
+.top,
+.bottom {
+  width: 100%;
+  height: 2px;
+  left: 0;
+}
+
+.top {
+  top: 0;
+}
+
+.bottom {
+  bottom: 0;
+}
+
+.left,
+.right {
+  width: 2px;
+  height: 100%;
+  top: 0;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+}
+
+.dropIndicator::before {
+  content: "";
+  position: absolute;
+  border: 2px solid #e33bf6;
+  border-radius: 50%;
+}
+
+.top::before,
+.bottom::before {
+  width: 6px;
+  height: 6px;
+  top: -4px;
+  left: -10px;
+}
+
+.left::before,
+.right::before {
+  width: 6px;
+  height: 6px;
+  left: -4px;
+  top: -10px;
+}
